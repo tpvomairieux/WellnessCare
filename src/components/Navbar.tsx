@@ -5,8 +5,6 @@ export default function Navbar(): React.JSX.Element {
   return (
     <header className="border-b border-slate-200 bg-white">
       <div className="relative flex h-32 w-full items-center px-6">
-        
-        {/* LEFT */}
         <NavLink to="/" className="flex items-center gap-4">
           <div className="h-20 w-20 overflow-hidden rounded-md">
             <img
@@ -26,7 +24,6 @@ export default function Navbar(): React.JSX.Element {
           </div>
         </NavLink>
 
-        {/* CENTER */}
         <nav className="absolute left-1/2 flex -translate-x-1/2 items-center gap-14">
           <NavLink
             to="/"
@@ -43,12 +40,45 @@ export default function Navbar(): React.JSX.Element {
             About
           </NavLink>
 
-          <NavLink
-            to="/services"
-            className="text-[1.5rem] font-semibold text-slate-700 hover:text-sky-900"
-          >
-            Services
-          </NavLink>
+          <div className="group relative">
+            <NavLink
+              to="/services"
+              className="text-[1.5rem] font-semibold text-slate-700 hover:text-sky-900"
+            >
+              Services
+            </NavLink>
+
+            <div className="absolute left-1/2 top-full h-4 w-40 -translate-x-1/2" />
+
+            <div className="pointer-events-none absolute left-1/2 top-full z-50 mt-4 w-80 -translate-x-1/2 translate-y-7 rounded-2xl border border-slate-200 bg-white p-3 opacity-0 shadow-xl transition-all duration-350 ease-out group-hover:pointer-events-auto group-hover:translate-y-0 group-hover:opacity-100">
+              <div className="flex flex-col">
+                <button
+                  type="button"
+                  className="rounded-xl px-4 py-3 text-left text-[1.1rem] font-medium text-slate-700 transition hover:bg-sky-50 hover:text-sky-900"
+                >
+                  Acupuncture
+                </button>
+                <button
+                  type="button"
+                  className="rounded-xl px-4 py-3 text-left text-[1.1rem] font-medium text-slate-700 transition hover:bg-sky-50 hover:text-sky-900"
+                >
+                  Hair Loss Treatment
+                </button>
+                <button
+                  type="button"
+                  className="rounded-xl px-4 py-3 text-left text-[1.1rem] font-medium text-slate-700 transition hover:bg-sky-50 hover:text-sky-900"
+                >
+                  Chiropractor
+                </button>
+                <button
+                  type="button"
+                  className="rounded-xl px-4 py-3 text-left text-[1.1rem] font-medium text-slate-700 transition hover:bg-sky-50 hover:text-sky-900"
+                >
+                  Herbal Medication
+                </button>
+              </div>
+            </div>
+          </div>
 
           <NavLink
             to="/locations"
@@ -58,7 +88,6 @@ export default function Navbar(): React.JSX.Element {
           </NavLink>
         </nav>
 
-        {/* RIGHT */}
         <div className="ml-auto">
           <NavLink
             to="/appointments"
