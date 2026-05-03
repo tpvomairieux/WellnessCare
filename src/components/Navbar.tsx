@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 export default function Navbar(): React.JSX.Element {
   return (
     <header className="border-b border-slate-200 bg-white">
-      <div className="relative flex h-32 w-full items-center px-6">
+      <div className="relative flex h-24 w-full items-center px-4 md:h-32 md:px-6">
         <NavLink to="/" className="flex items-center gap-4">
           <div className="h-20 w-20 overflow-hidden rounded-md">
             <img
@@ -15,7 +15,7 @@ export default function Navbar(): React.JSX.Element {
           </div>
 
           <div className="flex flex-col leading-none justify-center">
-            <span className="text-[3.5rem] font-bold tracking-tight text-sky-900">
+            <span className="text-[2rem] font-bold tracking-tight text-sky-900 md:text-[3.5rem]">
               Wellness Care
             </span>
             <span className="mt-[0.2rem] pl-[3px] text-[1.175rem] text-slate-600">
@@ -24,7 +24,7 @@ export default function Navbar(): React.JSX.Element {
           </div>
         </NavLink>
 
-        <nav className="absolute left-1/2 flex -translate-x-1/2 items-center gap-14">
+        <nav className="hidden lg:absolute lg:left-1/2 lg:flex lg:-translate-x-1/2 lg:items-center lg:gap-14">
           <NavLink
             to="/"
             end
@@ -50,32 +50,42 @@ export default function Navbar(): React.JSX.Element {
 
             <div className="absolute left-1/2 top-full h-4 w-40 -translate-x-1/2" />
 
-            <div className="pointer-events-none absolute left-1/2 top-full z-50 mt-4 w-80 -translate-x-1/2 translate-y-7 rounded-2xl border border-slate-200 bg-white p-3 opacity-0 shadow-xl transition-all duration-350 ease-out group-hover:pointer-events-auto group-hover:translate-y-0 group-hover:opacity-100">
+            <div className="pointer-events-none absolute left-1/2 top-full z-50 mt-4 w-80 -translate-x-1/2 translate-y-7 rounded-2xl border border-slate-200 bg-white p-3 opacity-0 shadow-xl transition-all duration-300 ease-out group-hover:pointer-events-auto group-hover:translate-y-0 group-hover:opacity-100">
               <div className="flex flex-col">
-                <button
-                  type="button"
+                <NavLink
+                  to="/acupuncture"
                   className="rounded-xl px-4 py-3 text-left text-[1.1rem] font-medium text-slate-700 transition hover:bg-sky-50 hover:text-sky-900"
                 >
                   Acupuncture
-                </button>
-                <button
-                  type="button"
+                </NavLink>
+
+                <NavLink
+                  to="/hairlosstreatment"
                   className="rounded-xl px-4 py-3 text-left text-[1.1rem] font-medium text-slate-700 transition hover:bg-sky-50 hover:text-sky-900"
                 >
                   Hair Loss Treatment
-                </button>
-                <button
-                  type="button"
+                </NavLink>
+
+                <NavLink
+                  to="/chiropractor"
                   className="rounded-xl px-4 py-3 text-left text-[1.1rem] font-medium text-slate-700 transition hover:bg-sky-50 hover:text-sky-900"
                 >
                   Chiropractor
-                </button>
-                <button
-                  type="button"
+                </NavLink>
+
+                <NavLink
+                  to="/herbalmedication"
                   className="rounded-xl px-4 py-3 text-left text-[1.1rem] font-medium text-slate-700 transition hover:bg-sky-50 hover:text-sky-900"
                 >
                   Herbal Medication
-                </button>
+                </NavLink>
+
+                <NavLink
+                  to="/jogging"
+                  className="rounded-xl px-4 py-3 text-left text-[1.1rem] font-medium text-slate-700 transition hover:bg-sky-50 hover:text-sky-900"
+                >
+                  Stationary Ultra-Slow Jogging
+                </NavLink>
               </div>
             </div>
           </div>
